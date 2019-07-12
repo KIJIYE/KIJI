@@ -6,9 +6,17 @@
     <title>K I J I - HOME</title>
     <meta charset="utf-8">
     <style>
+    body {
+      background-image: url("MVI_7621.gif");
+      background-size: 400px;
+    }
       a {
         color: skyblue;
         text-decoration:none;
+      }
+       {
+      font-family: verdana;
+      font-size: 20px;
       }
       h1 {
         font-size: 70px;
@@ -20,18 +28,57 @@
         margin-right: auto;
         width: 1000px;
       }
+      .fonttest {
+        background-color: green;
+      }
+      table, th, td {
+        border: 1px solid black;
+        text-align: center;
+      }
+      /* hover 사용하면 table의 tr 위 마우스 올라갔을시 색 변경가능 */
+      tr:hover {
+        background-color: green;
+      }
+      li {
+        display: block;
+      }
+
     </style>
   </head>
   <body>
     <H1><a href="index.html">K I M J A E</a></h1>
+
+     <form action="/action_page.php" method="get">
+       KIJI: <input type="text" name="fname"><br>
+       KIMJAE: <input type="text" name="lname"><br>
+       <input type="submit" value="Submit">
+     </form>
+
     <input type="button" value="K I J I" onclick="
      document.querySelector('body').style.backgroundColor='green';
-     document.querySelector('body').style.color='white';
+     document.querySelector('body').style.color='black';
     ">
     <input type="button" value="K I M J A E" onclick="
-     document.querySelector('body').style.backgroundColor='white';
+     document.querySelector('body').style.backgroundColor='black';
      document.querySelector('body').style.color='green';
     ">
+
+    <P><table>
+      <tr>
+        <th>NAME</th>
+        <th>GOOD</th>
+        <th>NEXT</th>
+        <th>MINE</th>
+      </tr>
+      <tr>
+        <td>A</td>
+        <td>M</td>
+        <td>K</td>
+        <td>I</td>
+        <td>E</td>
+        <td>J</td>
+      </tr>
+    </table></P>
     <ul>
       <br><li><a href="1.html"><strong>단기임대</strong></a></li>
       <li><a href="2.html"><strong>보라곰팡이</strong></a></li>
