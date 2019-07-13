@@ -6,9 +6,15 @@
     <title>K I J I - HOME</title>
     <meta charset="utf-8">
     <style>
+
+    @@font-face {
+      src: url(fonts/AppleSDGothicNeoH.ttf);
+      font-family: kijikijits;
+    }
     body {
       background-image: url("MVI_7621.gif");
       background-size: 400px;
+      font-family: kijikijits;
     }
       a {
         color: skyblue;
@@ -21,6 +27,7 @@
       h1 {
         font-size: 70px;
         text-align:center;
+        font-family: arial;
       }
       .mainimg{
         display: block;
@@ -38,6 +45,9 @@
       /* hover 사용하면 table의 tr 위 마우스 올라갔을시 색 변경가능 */
       tr:hover {
         background-color: green;
+      }
+      th, td {
+        padding: 40px;
       }
       li {
         display: block;
