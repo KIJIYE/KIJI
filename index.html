@@ -7,44 +7,69 @@
     <meta charset="utf-8">
     <style>
 
-    [title~=INDEXIMG] {
-      border: 1px none RED;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
+      [title~=INDEXIMG] {
+        border: 1px none red;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-    .BLUELIGHT {
-      margin-left: 600px;
-      margin-top: -200px;
-    }
-    .dotborder {
-      border: 30px dotted green;
-      padding: 30px;
-      background: none;
-      margin-left: 200px;
-      margin-right: 200px;
-      height: 500px;
-      margin-top: -100px;
-    }
+      .BLUELIGHT {
+        margin-left: 60%;
+        margin-right: auto;
+      }
+      .dotborder {
+        border: 30px dotted green;
+        padding: 30px;
+        background: none;
+        margin-left: 200px;
+        margin-right: 200px;
+        height: 500px;
+        margin-top: -100px;
+      }
 
-    body {
-      background-image: url("MVI_7621.gif");
-      background-size: 400px;
-    }
-      a {
+      body {
+        background-image: url("MVI_7621.gif");
+        background-size: 400px;
+      }
+
+      /* childlist 하위 항목 링크들 */
+      #childlist {
         color: skyblue;
         text-decoration:none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+        font-size: 20px;
       }
-       {
-      font-family: verdana;
-      font-size: 20px;
-      }
+
       h1 {
         font-size: 70px;
         text-align:center;
         font-family: arial;
+        color: white;
+        text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
       }
+      /* 이거 h1 관련한 링크 밑줄 없애기 관련 start*/
+      a:link {
+        text-decoration: none;
+        color: #f4ffff;
+      }
+      a:visited {
+        text-decoration: none;
+        color: #f4ffff;
+      }
+      a:active {
+        text-decoration: none;
+        color: #f4ffff;
+      }
+      a: hover {
+        text-decoration: none;
+        color: #f4ffff;
+      }
+      /* 이거 h1 관련한 링크 밑줄 없애기 관련 finish */
 
       .fonttest {
         background-color: green;
@@ -64,17 +89,31 @@
         display: block;
       }
 
+      .rainbow {
+        width: 300px;
+        height: 300px;
+        background-color: #3264bc;
+        position: relative;
+        animation-name: example;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes example {
+        0% {background-color: #3264bc; left: 0%; top: 0%;}
+        25% {background-color: #2eaf88; left: 77%; top: 0%;}
+        50% {background-color: #5e01fe; left: 77%; top: 0%;}
+        75% {background-color: #008200; left: 0%; top: 0%;}
+        100% {background-color: #3264bc; left: 0%; top: 0%;}
+      }
+
     </style>
   </head>
   <body>
-    <H1><a href="index.html">K I M J A E</a></h1>
 
-     <form action="/action_page.php" method="get">
-       KIJI: <input type="text" name="fname"><br>
-       KIMJAE: <input type="text" name="lname"><br>
-       <input type="submit" value="Submit">
-     </form>
-
+   <div>
+    <h1><a href="index.html">K I J I</a></h1>
+  </div>
     <input type="button" value="K I J I" onclick="
      document.querySelector('body').style.backgroundColor='green';
      document.querySelector('body').style.color='black';
@@ -84,7 +123,7 @@
      document.querySelector('body').style.color='green';
     ">
 
-    <P><table>
+    <br><br><br><P><table>
       <tr>
         <th>NAME</th>
         <th>GOOD</th>
@@ -101,9 +140,9 @@
       </tr>
     </table></P>
     <ul>
-      <br><li><a href="1.html"><strong>단기임대</strong></a></li>
-      <li><a href="2.html"><strong>보라곰팡이</strong></a></li>
-      <li><a href="3.html"><strong>비장소</strong></a></li>
+      <br><li><a href="1.html" id="childlist"><strong>단기임대</strong></a></li>
+      <li><a href id="childlist"="2.html"><strong>보라곰팡이</strong></a></li>
+      <li><a href id="childlist"="3.html"><strong>비장소</strong></a></li>
     </ul>
 
 <!--
@@ -119,6 +158,9 @@
           <img src="R0010971.JPG" class="BLUELIGHT" title="INDEXIMG" width="400px" height="400px">
           <div class="dotborder" title="INDEXIMG"></div>
         </p>
+
+        <div class="rainbow">
+        </div>
 
 <p><div id="disqus_thread"></div>
 <script>
