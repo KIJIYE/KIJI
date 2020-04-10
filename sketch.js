@@ -1,12 +1,12 @@
 let value = 255;
 
 function setup() {
-  var cnv = createCanvas(windowWidth, windowHeight);
+  var cnv = createCanvas(windowWidth, windowHeight/3);
   cnv.parent('myContainer');
 }
 
 function windowResized(){
-  resizedCanvas (windowWidth, windowHeight);
+  resizeCanvas (windowWidth, windowHeight/3);
 }
 
 function draw() {
